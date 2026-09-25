@@ -40,8 +40,6 @@ This project fine-tunes a pretrained **YOLOv8s** model to detect and classify **
 | 📦 mAP50 | **0.892** |
 | 📊 mAP50-95 | **0.754** |
 
-> Improves on both the earlier 34-class model and the harsh-condition-only "Albumented" model across all four metrics.
-
 ---
 
 ## ⚙️ Requirements
@@ -150,7 +148,6 @@ export ROBOFLOW_API_KEY="your-api-key-here"
 
 All evaluation plots below are generated automatically by Ultralytics (`plots=True`) and live in the [`results/`](./results) folder.
 
-> ⚠️ **Rename these files in your `results/` folder first** (GitHub filenames with spaces break Markdown image links). Suggested renames:
 
 | Current filename | Rename to |
 |---|---|
@@ -210,8 +207,6 @@ All evaluation plots below are generated automatically by Ultralytics (`plots=Tr
 </tr>
 </table>
 
-If you add more `result N.png` files later, rename them the same way (`sample_prediction_3.png`, etc.) and drop them into the table above.
-
 ---
 
 ## 🧰 Technology Used
@@ -240,5 +235,5 @@ If you add more `result N.png` files later, rename them the same way (`sample_pr
 ---
 
 <div align="center">
-Made with YOLOv8 · Trained on Google Colab
+Made with YOLOv8 · Trained on Google Colab · Author: Ankit Kumar Jha
 </div>
