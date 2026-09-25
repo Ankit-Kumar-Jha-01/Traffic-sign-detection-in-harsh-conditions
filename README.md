@@ -148,18 +148,69 @@ export ROBOFLOW_API_KEY="your-api-key-here"
 
 ## 📈 Visualization
 
-The training run automatically generates (via Ultralytics `plots=True`):
-- 📉 Loss curves (box loss, classification loss, DFL loss) across epochs
-- 📊 Precision-Recall and F1-confidence curves
-- 🧩 Confusion matrix across all 61 classes
-- 🖼️ Sample batches with predicted vs. ground-truth bounding boxes
+All evaluation plots below are generated automatically by Ultralytics (`plots=True`) and live in the [`results/`](./results) folder.
 
-Additional visual checks included in the pipeline:
-- Preview grid of harsh-condition augmented training images (sanity check before training)
-- Annotated test-set predictions with bounding boxes and class labels
-- Manually uploaded image inference, plotted with `results[0].plot()`
+> ⚠️ **Rename these files in your `results/` folder first** (GitHub filenames with spaces break Markdown image links). Suggested renames:
 
-*(Add your actual result images/GIFs here once exported from the `runs/` or `Test_Prediction_Results/` folder, e.g. `![Confusion Matrix](assets/confusion_matrix.png)`)*
+| Current filename | Rename to |
+|---|---|
+| `BoxF1_curve.png` | `F1_confidence_curve.png` |
+| `BoxPR_curve.png` | `precision_recall_curve.png` |
+| `BoxP_curve.png` | `precision_curve.png` |
+| `BoxR_curve.png` | `recall_curve.png` |
+| `confusion_matrix.png` | `confusion_matrix.png` *(keep as is)* |
+| `confusion_matrix_normalized.png` | `confusion_matrix_normalized.png` *(keep as is)* |
+| `result 1.png` | `sample_prediction_1.png` |
+| `result 2.png` | `sample_prediction_2.png` |
+
+### Precision, Recall & F1
+
+<table>
+<tr>
+<td><img src="results/precision_curve.png" alt="Precision Curve" width="400"/></td>
+<td><img src="results/recall_curve.png" alt="Recall Curve" width="400"/></td>
+</tr>
+<tr>
+<td align="center"><sub>Precision-Confidence Curve</sub></td>
+<td align="center"><sub>Recall-Confidence Curve</sub></td>
+</tr>
+<tr>
+<td><img src="results/precision_recall_curve.png" alt="Precision-Recall Curve" width="400"/></td>
+<td><img src="results/F1_confidence_curve.png" alt="F1-Confidence Curve" width="400"/></td>
+</tr>
+<tr>
+<td align="center"><sub>Precision-Recall Curve</sub></td>
+<td align="center"><sub>F1-Confidence Curve</sub></td>
+</tr>
+</table>
+
+### Confusion Matrix
+
+<table>
+<tr>
+<td><img src="results/confusion_matrix.png" alt="Confusion Matrix" width="400"/></td>
+<td><img src="results/confusion_matrix_normalized.png" alt="Normalized Confusion Matrix" width="400"/></td>
+</tr>
+<tr>
+<td align="center"><sub>Confusion Matrix</sub></td>
+<td align="center"><sub>Normalized Confusion Matrix</sub></td>
+</tr>
+</table>
+
+### Sample Predictions
+
+<table>
+<tr>
+<td><img src="results/sample_prediction_1.png" alt="Sample Prediction 1" width="400"/></td>
+<td><img src="results/sample_prediction_2.png" alt="Sample Prediction 2" width="400"/></td>
+</tr>
+<tr>
+<td align="center"><sub>Detection on test image #1</sub></td>
+<td align="center"><sub>Detection on test image #2</sub></td>
+</tr>
+</table>
+
+If you add more `result N.png` files later, rename them the same way (`sample_prediction_3.png`, etc.) and drop them into the table above.
 
 ---
 
